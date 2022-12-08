@@ -12,7 +12,7 @@ double fx (double x)
 {
  double f;
 
- f=-exp(5*log(x))/(exp(x)-1);
+ f=-1/(4*M_PI*14.4*x)+1090*exp(-x/0.321);
  return f;
 }
 
