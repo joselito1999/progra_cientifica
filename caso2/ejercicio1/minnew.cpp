@@ -12,7 +12,7 @@ double fx (double x)
 {
  double f;
 
- f=-0.0411/x+1090*exp(-x);
+ f=-0.0411/x+exp(-x);
  return f;
 }
 
@@ -43,7 +43,7 @@ int main()
 
  error=1;
  count=0;
- while( error > del) {
+ while( abs(dfx(xo))>del) {
   x=xo-dfx(xo)/ddfx(xo);
   error=abs(x-xo);
   xo=x;
