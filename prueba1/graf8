@@ -1,0 +1,22 @@
+
+#set term postscript color
+#set output "fxy_min.eps"
+
+f(x,y)=3/sqrt(x*x+y*y)+2/sqrt((x-1)*(x-1)+(y-1)*(y-1))+2/sqrt((x-1)*(x-1)+y*y)+2/sqrt((y-1)*(y-1)+x*x);
+set key off
+set grid
+set dgrid3d
+set isosamples 50,50 
+#unset surface
+set view map 
+set contour
+set cntrparam levels 50
+set cntrparam levels incremental 13.5, 0.02
+set xlabel "x" font "Arial, 26"
+set ylabel "y" offset -1,0 font "Arial, 26"
+set xrange [0:1]
+set yrange [0:1]
+set xtics 0,0.1,1 font "Arial,18"
+set ytics 0,0.1,1 font "Arial,18"
+splot f(x,y) lc rgb "white", "minimo2d.dat" pt 5 ps 0.5 lc rgb "red" 
+pause -1
