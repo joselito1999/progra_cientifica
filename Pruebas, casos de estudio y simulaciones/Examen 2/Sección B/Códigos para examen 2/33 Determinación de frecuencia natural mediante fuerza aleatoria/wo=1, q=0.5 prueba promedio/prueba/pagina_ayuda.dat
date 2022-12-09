@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/11549004/gnuplot-plot-data-from-two-files-in-one-x-coordinate-in-other-y
+
+
+Para generar un archivo uniendo dos archivos
+
+set table "xy.dat"
+plot "< join x.dat y.dat" u 1:2:3 with table
+

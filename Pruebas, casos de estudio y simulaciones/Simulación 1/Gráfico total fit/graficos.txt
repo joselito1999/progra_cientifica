@@ -1,0 +1,7 @@
+Grafico ln vs ln
+
+plot "distang_0.001.dat" u (log(sin(0.5*$1))):(log($2)) lc rgb "red" pt 9, f1(x) lc rgb "red", "distang_0.01.dat" u (log(sin(0.5*$1))):(log($2)) lc rgb "blue" pt 9, f2(x) lc rgb "blue", "distang_0.1.dat" u (log(sin(0.5*$1))):(log($2)) lc rgb "green" pt 9, f3(x) lc rgb "green", "distang_1.dat" u (log(sin(0.5*$1))):(log($2)) lc rgb "#FF00FF" pt 9, f4(x) lc rgb "#FF00FF", "distang_10.dat" u (log(sin(0.5*$1))):(log($2)) lc rgb "#D2691E" pt 9, f5(x) lc rgb "#D2691E"
+
+Grafico ln vs theta
+
+plot "distang_0.001.dat" u 1:(log($2)) lc rgb "red" pt 9 title "E=0.001", f1(x) lc rgb "red" notitle, "distang_0.01.dat" u 1:(log($2)) lc rgb "blue" pt 9 title "E=0.01", f2(x) lc rgb "blue" notitle, "distang_0.1.dat" u 1:(log($2)) lc rgb "green" pt 9 title "E=0.1", f3(x) lc rgb "green" notitle, "distang_1.dat" u 1:(log($2)) lc rgb "#FF00FF" pt 9 title "E=1", f4(x) lc rgb "#FF00FF" notitle, "distang_10.dat" u 1:(log($2)) lc rgb "#D2691E" pt 9 title "E=10", f5(x) lc rgb "#D2691E" notitle

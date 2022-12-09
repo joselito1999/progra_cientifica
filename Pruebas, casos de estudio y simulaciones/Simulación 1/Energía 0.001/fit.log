@@ -1,0 +1,36 @@
+
+
+*******************************************************************************
+Thu Jun  2 07:32:08 2022
+
+
+FIT:    data read from "distang_0.001.dat" u (log(sin($1 /2))):(log($2))
+        format = x:z
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a+b*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 3.8939034111e+03   0.00e+00  1.52e+00    1.000000e+00   1.000000e+00
+   3 2.0009715947e+01  -3.23e-04  1.52e-03    1.899734e+00  -1.840212e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 20.0097
+rel. change during last iteration : -3.22807e-09
+
+degrees of freedom    (FIT_NDF)                        : 98
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.451864
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.204181
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.89973          +/- 0.09437      (4.968%)
+b               = -1.84021         +/- 0.04946      (2.688%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.878  1.000 
