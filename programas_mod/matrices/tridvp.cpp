@@ -7,6 +7,7 @@
 #include<fstream>
 #include<iostream>
 #include<math.h>
+#include<list>
 
 using namespace std;
 
@@ -86,7 +87,6 @@ bool comp (list<double> a,double b)
    }
  }
  return false;
- 
 }
 
 
@@ -108,7 +108,6 @@ int main()
  cin>>v3;
  
  for (int k=v1; k<v2; k=k+v3){
- 
  for ( int i = 0; i <n; i++ )
   {
    //t = clock();
@@ -123,26 +122,20 @@ int main()
     l=l-h*u1/(u2-u1);
     c++;
    } while (abs(u1)>0.0001 and c<100);
-   cout<<endl;
-   cout <<"Listo! \n";
-   cout <<c<<" iteraciones"<<endl;double b
-   cout <<"l= "<<l<<endl;
+   //cout<<endl;
+   //cout <<"Listo! \n";
+   //cout <<c<<" iteraciones"<<endl;double b
+   //cout <<"l= "<<l<<endl;
   //t = clock() - t;
   }
  //cout<<"tiempo: "<<(float)t/CLOCKS_PER_SEC<<"s"<<endl;
- if (comp(val,l,n)!){
-   
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  if(lalista.empty()||(comp(val,l,n)!)){
+   val.push_back(l);
+  }
+  if(val.size()==n){
+   break;
+  }
+ }
  cout<<endl;
  return 0;
 }
