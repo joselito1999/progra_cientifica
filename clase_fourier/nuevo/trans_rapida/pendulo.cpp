@@ -10,12 +10,14 @@
 #include <fstream>
 #include <math.h>
 #include <string>
+#include <ctime> 
 #define pi 3.14159265359
 
 using namespace std;
 
 double x1,v1,x2,v2,x3,v3,x4,v4,x5,v5,xo,vo,wo,b,w,a,t,dt,q;
 int num,n; //Para facilitar la evaluación simultanea
+unsigned t0, t1;
 
 double g2 (double y1,double y2) //Se define la aceleración como una función.
 {
