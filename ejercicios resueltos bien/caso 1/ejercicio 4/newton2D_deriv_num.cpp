@@ -7,17 +7,20 @@
 
 using namespace std;
 
+//Definición de ecuaciones a resolver
+
 double fxy (double x, double y)
 {
  double f;
- f=x/exp(5*log(pow(x,2)+pow(y,2))/2)+(x-1)/exp(5*log(pow(x-1,2)+pow(y,2))/2)+(x-0.5)/exp(5*log(pow(x-0.5,2)+pow(y-.866,2))/2)
+ f=x/exp(5*log(pow(x,2)+pow(y,2))/2)+(x-1)/exp(5*log(pow(x-1,2)+pow(y,2))/2)+pow(x-0.5,2)/exp(5*log(pow(x-0.5,2)+pow(y-.866,2))/2);
  return f;
 }
 
 double gxy (double x, double y)
 {
  double f;
- g=y/exp(5*log(pow(x,2)+pow(y,2))/2)+y/exp(5*log(pow(x-1,2)+pow(y,2))/2)+(y-0.866)/exp(5*log(pow(x-0.5,2)+pow(y-.866,2))/2);
+ 
+ f=y/exp(5*log(pow(x,2)+pow(y,2))/2)+y/exp(5*log(pow(x-1,2)+pow(y,2))/2)+(y-0.866)/exp(5*log(pow(x-0.5,2)+pow(y-.866,2))/2);
  return f;
 }
 
@@ -75,8 +78,6 @@ int main()
   dy=(gxy(x,y)*dfx(x,y)-fxy(x,y)*dgx(x,y))/(dfx(x,y)*dgy(x,y)-dgx(x,y)*dfy(x,y)); 
   x=x-dx;
   y=y-dy;
-  count++;
-  cout<<x<<" "<<y<<" "<<endl;
  } while( abs(dx)+abs(dy) > del );
 
  cout << "Número de iteraciones: " <<count<< endl;
@@ -85,3 +86,4 @@ int main()
  cout << "Error estimado para y: "<<abs(dy)<<endl;
  return 0;
 }
+

@@ -29,7 +29,7 @@ void dft (int N, istream& filein, ostream& fileout)
   filein.clear();
   filein.seekg(0, ios::beg);
 
-  for ( int k = 0; k < N/5; k++ )
+  for ( int k = 0; k < N/2; k++ )
   {
    a=2*pi*j*(2*k)/N;
    filein>>x>>f;   //elementos pares
