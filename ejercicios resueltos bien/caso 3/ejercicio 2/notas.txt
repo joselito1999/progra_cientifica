@@ -1,0 +1,1 @@
+Recordar que los valores propios de la matriz de momentos de inercia son wx, wy, wz

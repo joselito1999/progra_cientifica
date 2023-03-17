@@ -1,0 +1,10 @@
+notese que la forma general de los sistemas para masas acopladas es:
+dd(x1)+2*(k1+k2)/m1*x1-k2/m2*x2=0
+dd(x2)-k1/m1*x1+2(k2+k3)/m2*x2-k3/m3*x3=0
+tal que la matriz queda dada por:
+
+(k1+k2)/m1  -k2/m1         0
+-k2/m2     (k2+k3)/m2   -k3/m2
+    0       -k3/m3    (k3+k4)/m3
+
+los valores propios se ordenan de mayor a menor
